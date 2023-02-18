@@ -18,6 +18,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -85,13 +86,13 @@ public class BannerController extends BaseController {
         if (file != null) {
             String originalFilename = file.getOriginalFilename();
 
-            String baseLocalPath = "/Users/nss/Documents/zb_project/fastlms3/files";
-            String baseUrlPath = "/files";
+            String baseLocalPath = "/Users/nss/Documents/zb_project/fastlms3/src/main/resources/static";
+            String baseUrlPath = "";
 
             String[] arrFilename = getNewSaveFile(baseLocalPath, baseUrlPath, originalFilename);
-
+            System.out.println("========================" + Arrays.toString(arrFilename));
             saveFilename = arrFilename[0];
-            urlFilename = arrFilename[1];
+            urlFilename = arrFilename[1].replaceFirst("/", "");
 
             try {
                 File newFile = new File(saveFilename);

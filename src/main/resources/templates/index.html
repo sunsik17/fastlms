@@ -10,7 +10,7 @@
 
     <script>
         $(document).ready(function(){
-            $('.slider').bxSlider();
+            $('.home__slider').bxSlider();
         });
     </script>
 
@@ -19,10 +19,10 @@
     <h1>메인 페이지 </h1>
     <div th:replace="/fragments/layout.html :: fragment-body-menu"></div>
 
-    <div class="slider">
+    <div class="home__slider">
         <div th:each="x : ${list}" class="bxslider">
             <div>
-                <a href="#"><img th:src="${x.urlName}"></a>
+                <a th:href="${x.getPathOnClick()}"><img th:src="${x.getUrlName()}"></a>
             </div>
         </div>
     </div>

@@ -132,7 +132,7 @@
             <td>
                 <input type="checkbox" th:value="${x.id}" />
             </td>
-            <td th:text="${x.seq}">1</td>
+            <td th:text="${x.getSortNum()}">1</td>
             <td>
                 <p>
                     <a th:href="'edit.do?id=' + ${x.id}" th:text="${x.bannerName}">배너명</a>

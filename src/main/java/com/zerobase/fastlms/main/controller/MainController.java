@@ -23,11 +23,10 @@ public class MainController {
         List<BannerDto> postingBanners = adminBannerService.getPostedBanner();
 
         postingBanners.sort((x, y) -> x.getSortNum() - y.getSortNum());
-        System.out.println(postingBanners.get(0).isPosting());
-        System.out.println(postingBanners.size());
-
+//        System.out.println(postingBanners.get(0).isPosting());
+//        System.out.println(postingBanners.size());
         model.addAttribute("list", postingBanners);
-        
+
         return "index";
     }
     
