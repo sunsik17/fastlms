@@ -35,6 +35,7 @@ public class MemberDto {
     private String zipcode;
     private String addr;
     private String addrDetail;
+    private LocalDateTime loginAt;
     
     //추가컬럼
     long totalCount;
@@ -61,6 +62,7 @@ public class MemberDto {
                 .zipcode(member.getZipcode())
                 .addr(member.getAddr())
                 .addrDetail(member.getAddrDetail())
+                .loginAt(member.getLoginAt())
                 
                 .build();
     }

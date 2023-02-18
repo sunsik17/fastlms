@@ -35,9 +35,10 @@ public class Member implements MemberCode {
     
     private String userStatus;//이용가능한상태, 정지상태
     
-    
+
     private String zipcode;
     private String addr;
     private String addrDetail;
-    
+
+    private LocalDateTime loginAt;
 }
