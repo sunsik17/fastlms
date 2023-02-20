@@ -22,7 +22,7 @@
     <div class="home__slider">
         <div th:each="x : ${list}" class="bxslider">
             <div>
-                <a th:href="${x.getPathOnClick()}"><img th:src="${x.getUrlName()}"></a>
+                <a th:href="${x.getPathOnClick()}" th:target="${#strings.equals(x.getTarget(),'newTab') ? '_blank' : '_self'}"><img th:src="${x.getUrlName()}"></a>
             </div>
         </div>
     </div>

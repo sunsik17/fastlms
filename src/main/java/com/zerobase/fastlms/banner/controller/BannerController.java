@@ -107,7 +107,7 @@ public class BannerController extends BaseController {
         param.setBannerName(request.getParameter("bannerName"));
         param.setPosting(
                 request.getParameterValues("isPosting") != null);
-        param.setTarget(request.getParameter("target"));
+        param.setTarget(request.getParameter("targetSelect"));
 
         boolean editMode = request.getRequestURI().contains("/edit.do");
 

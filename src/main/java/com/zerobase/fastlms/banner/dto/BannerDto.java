@@ -37,6 +37,7 @@ public class BannerDto {
                 .urlName(banner.getUrlName())
                 .createdAt(banner.getCreatedAt()
                         .format(DateTimeFormatter.ofPattern("yyyy-MM-dd")))
+                .target(banner.getTarget())
                 .build();
     }
 }
